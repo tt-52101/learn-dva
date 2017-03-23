@@ -45,13 +45,13 @@ export default {
     },
     subscriptions: {
         setup({ dispatch, history }) {
-            dispatch({ type: 'fetch', payload:{page:1} });
-            // return history.listen(({ pathname, query }) => {
-            //     if (pathname === '/users') {
-            //         console.log('/users')
-            //         dispatch({ type: 'fetch', payload: query });
-            //     }
-            // });
+            // dispatch({ type: 'fetch' });
+            return history.listen(({ pathname, query }) => {
+                if (pathname === '/users' || pathname === '/') {
+                    console.log('/users')
+                    dispatch({ type: 'fetch', payload: query });
+                }
+            });
         },
     },
 };

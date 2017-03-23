@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'dva';
 import { Table, Pagination, Popconfirm, Button } from 'antd';
 
-import styles from './Users.css';
+import styles from './index.css';
 import { PAGE_SIZE } from '../../constants';
-import UserModal from './UserModal';
+import UserModal from './modal.js';
 
 function UserList({ dataSource, current, loading, deleteHandler, pageChangeHandler, editHandler, createHandler, total }) {
     

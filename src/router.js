@@ -1,6 +1,6 @@
  import React, { PropTypes } from 'react'
  import { Router } from 'dva/router'
- import App from './routes/App'
+ import App from './routes/app'
  const cached = {}
  const registerModel = (app, model) => {
      if (!cached[model.namespace]) {
@@ -15,8 +15,8 @@
          getIndexRoute(nextState, cb) {
              require.ensure([], require => {
                      registerModel(app, require('./models/users'))
-                     cb(null, { component: require('./routes/Users') })
-                 }, 'users') //dashboard 是chunkName
+                     cb(null, { component: require('./routes/users') })
+                 }, 'users') //users 是chunkName,可不传入
          },
          childRoutes: [{
              path: 'users',
@@ -24,7 +24,7 @@
              getComponent(nextState, cb) {
                  require.ensure([], require => {
                      registerModel(app, require('./models/users'))
-                     cb(null, require('./routes/Users'))
+                     cb(null, require('./routes/users'))
                  }, 'users')
              },
          }],

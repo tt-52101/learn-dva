@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'dva'
-import styles from '../components/MainLayout/MainLayout.css';
-import Header from '../components/MainLayout/Header';
-import MainLayout from '../components/MainLayout/MainLayout'
+import styles from '../components/layout/index.css';
+import Header from '../components/layout/header';
+// import MainLayout from '../components/MainLayout/MainLayout'
 import { routerRedux } from 'dva/router'
-import Login from '../components/login/login.js'
+import Login from './login'
 
 function App({ children, location, dispatch, app }) {
     console.log(app)

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './Users.css';
-import UserList from '../components/Users/UserList';
+import styles from './index.css';
+import UserList from './list';
 import { routerRedux } from 'dva/router';
-import MainLayout from '../components/MainLayout/MainLayout';
+// import MainLayout from '../components/MainLayout/MainLayout';
 
 function Users({ location, dispatch, users }) {
 	const { list, loading, page, total } = users;
