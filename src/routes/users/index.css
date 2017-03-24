@@ -1,7 +1,7 @@
 
 .normal {
-  width: 900px;
-  margin: 3em auto 0;
+  width: 100%;
+  /*margin: 3em auto 0;*/
 }
 .create {
   margin-bottom: 1.5em;

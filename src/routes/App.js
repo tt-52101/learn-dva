@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'dva'
-import styles from '../components/layout/index.css';
+import styles from '../components/layout/index.less';
 import Header from '../components/layout/header';
-// import MainLayout from '../components/MainLayout/MainLayout'
+import Sider from '../components/layout/menu.js'
 import { routerRedux } from 'dva/router'
 import Login from './login'
+
 
 function App({ children, location, dispatch, app }) {
     console.log(app)
@@ -30,17 +31,16 @@ function App({ children, location, dispatch, app }) {
         },
         location
     }
-    return (<div>{is_login
-        ? 
-        <div className={styles.normal}>
-            <Header {...headerProps} />
-            <div className={styles.content}>
-                <div className={styles.main}>
+    return (
+        is_login ? 
+        <div className={styles.wrap}>
+            <Sider/>
+            <div className={styles.main}>
                 {children}
-                </div>
             </div>
         </div>
-        : <Login {...loginProps} />}</div>)
+        : <Login {...loginProps} />
+        )
 }
 
 function mapStateToProps(state) {
