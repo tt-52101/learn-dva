@@ -9,12 +9,14 @@ import Login from './login'
 function App({ children, location, dispatch, app }) {
     console.log(app)
     const { is_login } = app;
+    
     const loginProps = {
         onOk(data) {
            
             console.log(data)
             dispatch({
                 type: 'app/login',
+                payload: data
                
             })
         }

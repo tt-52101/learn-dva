@@ -3,7 +3,7 @@ import { PAGE_SIZE } from '../constants';
 
 export function login({ payload }) {
   console.log(payload)
-  return request(`/system/user/login`, {
+  return request(`/api/login`, {
     method: 'POST',
     body: JSON.stringify({payload}),
 

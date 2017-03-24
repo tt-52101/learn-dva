@@ -15,17 +15,20 @@ export default {
         }
     },
     effects: {
-        * login({payload}, { call, put }) {
-            
+        * login({ payload }, { call, put }) {
+          
+            localStorage.setItem('dva-token', 999)
             yield put({
                 type: 'loginSuccess',
-                payload: {
-                    is_login: true,
-                    
-                }
+            })
+        },
+        *queryToken({}, { call, put }){
+            yield put({
+                type: 'loginSuccess',
             })
         },
         * logout(action, { call, put }) {
+            localStorage.removeItem('dva-token');
             
             yield put({
                 type: 'logoutSuccess',
@@ -36,7 +39,10 @@ export default {
     },
     subscriptions: {
         setup({dispatch}) {
-            // dispatch({type: 'login'})
+            
+            if (localStorage.getItem('dva-token')) {
+               dispatch({type: 'queryToken'})
+            };
         }
     },
 };
