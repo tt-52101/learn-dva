@@ -4,7 +4,8 @@ export default {
     namespace: 'app',
     state: {
          is_login: false,
-         username: ''
+         username: '',
+         selectedKeys: '首页'
     },
     reducers: {
         loginSuccess(state, action){
@@ -12,6 +13,10 @@ export default {
         },
         logoutSuccess(state){
             return {...state, is_login: false}
+        },
+        selectMenu(state, action) {
+            console.log(action)
+            return {...state, selectedKeys: action.key}
         }
     },
     effects: {

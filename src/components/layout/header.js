@@ -1,38 +1,59 @@
-import React from 'react';
-import { Menu, Icon, Button } from 'antd';
-import { Link } from 'dva/router';
+import { Row, Col, Menu, Button, Select } from 'antd';
+const logSrc = require('../../assets/logo.svg')
+import { MenuItems, OptionItems } from '../../utils/config'
+ 
+import styles from './index.less'
+ 
 
-function Header({ location, handleLogout }) {
-  function logout() {
-    console.log('logout');
-    handleLogout();
-  }
-  return (
-    <Menu
-      selectedKeys={[location.pathname]}
-      mode="horizontal"
-      theme="dark"
-    >
-      <Menu.Item key="users">
-        <Link to="users"><Icon type="bars" />Users</Link>
-      </Menu.Item>
-      <Menu.Item key="">
-        <Link to=""><Icon type="home" />Home</Link>
-      </Menu.Item>
-      <Menu.Item key="login">
-        <Link to="login"><Icon type="user" />Login</Link>
-      </Menu.Item>
-      <Menu.Item key="404">
-        <Link to="page-you-dont-know"><Icon type="frown-circle" />404</Link>
-      </Menu.Item>
-      <Menu.Item key="antd">
-        <a href="https://github.com/dvajs/dva">dva</a>
-      </Menu.Item>
-      <Menu.Item key="logout">
-        <Button onClick={logout}>退出</Button>
-      </Menu.Item>
-    </Menu>
-  );
+const SubMenu = Menu.SubMenu;
+
+function Headers({handleMenuClick, selectedKeys}){
+  
+    return (
+        <header id={styles.header}>
+            <Row>
+                <Col span={4}>
+                    <a id={styles.logo} href="/"><img src={logSrc} alt=""/><span>Ant Design</span></a>
+                </Col>
+                <Col span={20}>
+                <div id={styles.searchBox}>
+                    <Select
+                      combobox
+                      style={{ width: 200 }}
+                      placeholder="搜索组件"
+                    >
+                        {
+                            OptionItems.map(item => {
+                                return <option key={item.key}>{item.name}</option>
+                            })
+                        }
+                    </Select>
+                </div>
+                <Button type="ghost" size="small" className={styles.lang}>EN</Button>
+                <Select className={styles.version} size="small" defaultValue="1.x">
+                    {
+                        OptionItems.map(item => {
+                            return <option key={item.key}>{item.name}</option>
+                        })
+                    }
+                    
+                </Select>
+                    <Menu
+                      onClick={handleMenuClick}
+                      selectedKeys={[selectedKeys]}
+                      mode="horizontal"
+                      id={styles.nav}
+                    >
+                    { 
+                        MenuItems.map((item) => {
+                            return <Menu.Item key={item.key}>{item.name}</Menu.Item>
+                      }) 
+                    }
+                    </Menu>
+                </Col>
+            </Row>
+        </header>
+        )
 }
 
-export default Header;
+export default Headers
