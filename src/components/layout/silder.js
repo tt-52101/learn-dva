@@ -1,7 +1,9 @@
 import { Menu, Icon } from 'antd';
+import { Link } from 'dva/router'
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 import SideMenus from '../../utils/sideMenus'
+
 
 class Sider extends React.Component {
   handleClick = (e) => {
@@ -26,7 +28,7 @@ class Sider extends React.Component {
                                         <MenuItemGroup key={group.key} title={group.name}>
                                             {
                                                 group.children.map(child => {
-                                                    return <Menu.Item key={child.key}>{child.name}</Menu.Item>
+                                                    return <Menu.Item key={child.key}> <Link to={child.key.toLowerCase()}>{child.name}</Link> </Menu.Item>
                                                 })
                                             }
                                         </MenuItemGroup>

@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react'
+import React } from 'react'
 import { connect } from 'dva'
 import styles from '../components/layout/index.less';
 import Header from '../components/layout/header';
 import Sider from '../components/layout/silder'
 import { routerRedux } from 'dva/router'
-import {Row, Col} from 'antd'
+import { Row, Col } from 'antd'
 import Login from './login'
 
 

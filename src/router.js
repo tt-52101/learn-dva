@@ -1,4 +1,4 @@
- import React, { PropTypes } from 'react'
+ import { React, { PropTypes } from 'react'
  import { Router } from 'dva/router'
  import App from './routes/app'
  const cached = {}
@@ -26,6 +26,22 @@
                      registerModel(app, require('./models/users'))
                      cb(null, require('./routes/users'))
                  }, 'users')
+             },
+         },{
+             path: 'icon',
+             name: 'icon',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/icon'))
+                 }, 'icon')
+             },
+         },{
+             path: 'button',
+             name: 'button',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/button'))
+                 }, 'button')
              },
          }],
      }, ]

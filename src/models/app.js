@@ -1,4 +1,4 @@
-import {login} from '../services/login';
+// import { login } from '../services/login';
 import { parse } from 'qs'
 export default {
     namespace: 'app',

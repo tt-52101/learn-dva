@@ -7,10 +7,10 @@ import { message } from 'antd';
 
 // 1. Initialize
 const app = dva({
-  history: browserHistory,
-  onError(e) {
-     message.error(e.message, 3);
-   },
+	history: browserHistory,
+	onError(e) {
+		message.error(e.message, 3);
+	},
 });
 
 // 2. Plugins
