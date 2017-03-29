@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'dva'
 import styles from '../components/layout/index.less';
 import Header from '../components/layout/header';
+import Footer from '../components/layout/footer'
 import Sider from '../components/layout/silder'
 import { routerRedux } from 'dva/router'
 import { Row, Col } from 'antd'
@@ -51,10 +52,9 @@ function App({ children, location, dispatch, app }) {
                             {children}
                         </div>
                     </Col>
-                    
-                    
                 </Row>
             </div>
+            <Footer></Footer>
         </div>
         : <Login {...loginProps} />
         )

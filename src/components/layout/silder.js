@@ -14,7 +14,7 @@ class Sider extends React.Component {
       <Menu
         onClick={this.handleClick}
         
-        defaultSelectedKeys={['Button']}
+        defaultSelectedKeys={['introduce']}
         defaultOpenKeys={['Component']}
         mode="inline"
       >

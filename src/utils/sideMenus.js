@@ -1,4 +1,8 @@
 const SideMenus = [{
+	name: '项目介绍',
+	key: 'introduce',
+	groups: []
+},{
 	name: 'Component',
 	key: 'Component',
 	groups: [{

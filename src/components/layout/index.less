@@ -1,22 +1,17 @@
- 
  .logo {
      text-align: center;
      padding: 20px 0;
  }
  
  .side {
-     // height: 100vh;
-     // position: absolute;
-     // overflow: auto;
      width: 220px;
-     a{
-        font-size: 14px;
+     a {
+         font-size: 14px;
      }
  }
  
  .wrap {
      position: relative;
-     // height: 100vh;
      background: #ececec;
  }
  
@@ -28,8 +23,6 @@
  }
  
  .main {
-     // height: 100vh;
-     // overflow: auto;
      padding-left: 50px;
  }
  
@@ -70,12 +63,12 @@
      float: right;
      font-size: 14px;
      font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
-     li{
-        height: 80px;
-        line-height: 80px;
-        min-width: 72px;
-        text-align: center;
-        border-bottom-width: 3px;
+     li {
+         height: 80px;
+         line-height: 80px;
+         min-width: 72px;
+         text-align: center;
+         border-bottom-width: 3px;
      }
  }
  
@@ -105,16 +98,58 @@
          }
      }
  }
-.wrapper{
-    margin: 0 48px;
-    border-radius: 4px;
-    min-height: 600px;
-    // padding: 24px 0 0;
-    // margin-bottom: 24px;
-    background: #fff;
-}
-:global{
-    .ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
-        font-size: 14px;
-    }
-}
+ 
+ .wrapper {
+     margin: 0 48px;
+     border-radius: 4px;
+     min-height: 600px;
+     // padding: 24px 0 0;
+     margin-bottom: 24px;
+     background: #fff;
+ }
+ 
+ :global {
+     .ant-menu-vertical .ant-menu-item,
+     .ant-menu-inline .ant-menu-item,
+     .ant-menu-vertical .ant-menu-submenu-title,
+     .ant-menu-inline .ant-menu-submenu-title {
+         font-size: 14px;
+     }
+ }
+ 
+ // footer
+ #footer {
+     clear: both;
+     font-size: 12px;
+     background: #fff;
+     position: relative;
+     z-index: 1;
+     color: rgba(0, 0, 0, .65);
+     box-shadow: 0 1000px 0 1000px #fff;
+     ul {
+         overflow: hidden;
+         margin: 0 2%;
+         list-style: none;
+         li {
+             float: left;
+             width: 25%;
+             padding: 24px 2%;
+             >h2 {
+                 font-size: 14px;
+                 margin: 0 auto 8px;
+                 font-weight: 500;
+                 position: relative;
+                 i {
+                     font-size: 16px;
+                     position: absolute;
+                     left: -22px;
+                     top: 3px;
+                     color: #aaa;
+                 }
+             }
+             >div {
+                 margin: 0 0 5px;
+             }
+         }
+     }
+ }

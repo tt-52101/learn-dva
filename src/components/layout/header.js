@@ -16,19 +16,6 @@ function Headers({handleMenuClick, selectedKeys}){
                     <a id={styles.logo} href="/"><img src={logSrc} alt=""/><span>Ant Design</span></a>
                 </Col>
                 <Col span={20}>
-                <div id={styles.searchBox}>
-                    <Select
-                      combobox
-                      style={{ width: 200 }}
-                      placeholder="搜索组件"
-                    >
-                        {
-                            OptionItems.map(item => {
-                                return <option key={item.key}>{item.name}</option>
-                            })
-                        }
-                    </Select>
-                </div>
                 <Button type="ghost" size="small" className={styles.lang}>EN</Button>
                 <Select className={styles.version} size="small" defaultValue="1.x">
                     {
