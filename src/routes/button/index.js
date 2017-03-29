@@ -1,6 +1,6 @@
 import Introduce from '../../components/introduce/'
 import { CodeWrap, Code, CodeDescription, CodeComponent } from '../../components/showcode/'
- 
+
 import { Row, Col, Button } from 'antd'
 const pre_code =
  `
@@ -26,6 +26,7 @@ function Buttons({location}){
 
 	return (
 		<div>
+		 	
 			<Introduce {...introduceProps}></Introduce>
 			<Row>
 				<Col span={12}>

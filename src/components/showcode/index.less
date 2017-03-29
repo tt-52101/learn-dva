@@ -11,7 +11,7 @@ p{
 .component{
 	
 	border-bottom: 1px solid #e9e9e9;
-	padding: 42px 20px 50px;
+	padding: 42px 20px 60px;
 	button{
 		margin-right: 10px;
 	}
@@ -36,7 +36,7 @@ pre{
 		right: 10px;
 		top: 10px;
 		opacity: 0;
-
+		cursor: pointer;
 		transition: all 0.24s;
 	}
 }
@@ -50,7 +50,9 @@ pre{
 .desc{
 	position: relative;
 	padding: 20px;
-	
+	a{
+		margin-left: 5px;
+	}
 	p{
 		line-height: 25px;
 
@@ -66,5 +68,13 @@ pre{
 	cursor: pointer;
 	i{
 		color: #ccc;
+
+	}
+}
+ 
+:global{
+	.anticon-check{
+		color: green;
+		font-weight: bold;
 	}
 }

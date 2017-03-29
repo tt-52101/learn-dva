@@ -4,7 +4,7 @@
     "start": "roadhog server",
     "build": "roadhog build",
     "test": "roadhog test",
-    "lint": "eslint --ext .js src test",
+    "lint": "eslint --ext .js src test"
   },
   "dependencies": {
     "antd": "*",
@@ -13,7 +13,9 @@
     "dva-loading": "*",
     "rc-table": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-copy-to-clipboard": "^4.2.3",
+    "react-dom": "*",
+    "react-zeroclipboard": "^3.2.2"
   },
   "devDependencies": {
     "babel-eslint": "*",

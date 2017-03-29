@@ -1,4 +1,4 @@
-import React } from 'react'
+import React from 'react'
 import { connect } from 'dva'
 import styles from '../components/layout/index.less';
 import Header from '../components/layout/header';
