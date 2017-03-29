@@ -14,13 +14,13 @@ class Code extends Component {
 		this.state.copyed && this.setState({ copyed: false })
 	}
 	render() {
-		const {code } = this.props;
+		const { code } = this.props;
 		return (
 			<pre className={styles.pre}>
 				{
-					<Tooltip onClick={this.handleCopy} onMouseLeave={this.handleLeave} title={this.state.copyed?'复制成功': '复制代码'}>
+					<Tooltip title={this.state.copyed?'复制成功': '复制代码'}>
 						<CopyToClipboard text={code}>
-						 		<Icon type={this.state.copyed ? 'check' : 'copy'} />
+						 		<Icon onClick={this.handleCopy} onMouseLeave={this.handleLeave} type={this.state.copyed ? 'check' : 'copy'} />
 						 	</CopyToClipboard>
 					</Tooltip>  
 				}
@@ -31,7 +31,5 @@ class Code extends Component {
 		)
 	}
 }
-
-
 
 export default Code;

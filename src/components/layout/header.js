@@ -1,5 +1,5 @@
 import { Row, Col, Menu, Button, Select } from 'antd';
-const logSrc = require('../../assets/logo.svg')
+const logSrc = 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg'
 import { MenuItems, OptionItems } from '../../utils/config'
  
 import styles from './index.less'

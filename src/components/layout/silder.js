@@ -21,7 +21,7 @@ class Sider extends React.Component {
         {
             SideMenus.map(item => {
                 return (
-                        <SubMenu key={item.key} title={<span>{item.name}</span>}>
+                        <SubMenu key={item.key} title={<h4>{item.name}</h4>}>
                             {
                                 item.groups.map(group => {
                                     return (
