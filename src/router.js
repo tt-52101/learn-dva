@@ -14,9 +14,8 @@
          component: App,
          getIndexRoute(nextState, cb) {
              require.ensure([], require => {
-                     registerModel(app, require('./models/users'))
-                     cb(null, { component: require('./routes/users') })
-                 }, 'users') //users 是chunkName,可不传入
+                     cb(null, { component: require('./routes/readme/') })
+                 }, 'readme')
          },
          childRoutes: [{
              path: 'users',
@@ -24,7 +23,7 @@
              getComponent(nextState, cb) {
                  require.ensure([], require => {
                      registerModel(app, require('./models/users'))
-                     cb(null, require('./routes/users'))
+                     cb(null, require('./routes/users/'))
                  }, 'users')
              },
          },{
@@ -32,7 +31,7 @@
              name: 'icon',
              getComponent(nextState, cb) {
                  require.ensure([], require => {
-                     cb(null, require('./routes/icon'))
+                     cb(null, require('./routes/icon/'))
                  }, 'icon')
              },
          },{
@@ -40,8 +39,24 @@
              name: 'button',
              getComponent(nextState, cb) {
                  require.ensure([], require => {
-                     cb(null, require('./routes/button'))
+                     cb(null, require('./routes/button/'))
                  }, 'button')
+             },
+         },{
+             path: 'breadcrumb',
+             name: 'breadcrumb',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/breadcrumb/'))
+                 }, 'breadcrumb')
+             },
+         },{
+             path: 'dropdown',
+             name: 'dropdown',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/dropdown/'))
+                 }, 'dropdown')
              },
          }],
      }, ]

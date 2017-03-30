@@ -15,6 +15,7 @@
     "react": "*",
     "react-copy-to-clipboard": "^4.2.3",
     "react-dom": "*",
+    "react-syntax-highlighter": "^5.1.2",
     "react-zeroclipboard": "^3.2.2"
   },
   "devDependencies": {

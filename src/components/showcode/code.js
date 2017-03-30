@@ -2,6 +2,9 @@ import styles from './index.less'
 import { Icon, Tooltip } from 'antd'
 import { Component } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { xcode } from 'react-syntax-highlighter/dist/styles';
+
 
 class Code extends Component {
 	state = {
@@ -24,9 +27,8 @@ class Code extends Component {
 						 	</CopyToClipboard>
 					</Tooltip>  
 				}
-				<code id="code">
-					{code}
-				</code>
+				<SyntaxHighlighter language='javascript' style={xcode}>{code}</SyntaxHighlighter>
+				
 			</pre>
 		)
 	}

@@ -21,21 +21,24 @@ class Sider extends React.Component {
         {
             SideMenus.map(item => {
                 return (
-                        <SubMenu key={item.key} title={<h4>{item.name}</h4>}>
-                            {
-                                item.groups.map(group => {
-                                    return (
-                                        <MenuItemGroup key={group.key} title={group.name}>
-                                            {
-                                                group.children.map(child => {
-                                                    return <Menu.Item key={child.key}> <Link to={child.key.toLowerCase()}>{child.name}</Link> </Menu.Item>
-                                                })
-                                            }
-                                        </MenuItemGroup>
-                                        )
-                                })
-                            }
-                        </SubMenu>
+                    item.groups ? 
+                    <SubMenu key={item.key} title={<h4>{item.name}</h4>}>
+                        {
+                            item.groups.map(group => {
+                                return (
+                                    <MenuItemGroup key={group.key} title={group.name}>
+                                        {
+                                            group.children.map(child => {
+                                                return <Menu.Item key={child.key}> <Link to={child.key.toLowerCase()}>{child.name}</Link> </Menu.Item>
+                                            })
+                                        }
+                                    </MenuItemGroup>
+                                    )
+                            })
+                        }
+                    </SubMenu> :
+                    <Menu.Item key={item.key}> <Link to={item.key.toLowerCase()}>{item.name}</Link> </Menu.Item>
+                        
                     )
             })
         }

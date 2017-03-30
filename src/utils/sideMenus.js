@@ -1,7 +1,6 @@
 const SideMenus = [{
 	name: '项目介绍',
 	key: 'introduce',
-	groups: []
 },{
 	name: 'Component',
 	key: 'Component',
@@ -16,14 +15,24 @@ const SideMenus = [{
 			key: 'Icon'
 		}]
 	},{
-		name: 'Layout',
-		key: 'Layout',
+		name: 'Navigation',
+		key: 'Navigation',
 		children: [{
-			name: 'Grid 栅格',
-			key: 'Grid'
+			name: 'Breadcrumb 面包屑',
+			key: 'Breadcrumb'
 		}, {
-			name: 'Layout 布局',
-			key: 'Layout'
+			name: 'Dropdown 下拉菜单',
+			key: 'Dropdown'
+		}]
+	},{
+		name: 'Custom',
+		key: 'Custom',
+		children: [{
+			name: 'Breadcrumb 面包屑',
+			key: 'Breadcrumb'
+		}, {
+			name: 'Dropdown 下拉菜单',
+			key: 'Dropdown'
 		}]
 	}]
 }]
