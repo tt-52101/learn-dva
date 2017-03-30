@@ -1,0 +1,58 @@
+.icon {
+    i {
+        font-size: 20px;
+        // background: #ccc;
+        padding: 10px;
+        transition: all .5s;
+    }
+    >div {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 3px;
+        transition: all .5s;
+        cursor: pointer;
+        &:hover {
+            background: #108ee9;
+            color: #fff;
+            transition: all .5s;
+            i {
+                transform: scale(1.5)
+            }
+        }
+    }
+}
+
+.h2 {
+    margin: 30px 0;
+}
+
+.p {
+    margin-bottom: 30px;
+}
+
+:global {
+	.floter{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		z-index: 99;
+	}
+    .showFloater {
+        .floter {
+
+            opacity: 1;
+            background: rgba(0,0,0,0.5);
+ 
+        }
+    }
+}
+
+ 

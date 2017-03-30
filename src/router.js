@@ -34,22 +34,6 @@
                  }, 'button')
              },
          },{
-             path: 'breadcrumb',
-             name: 'breadcrumb',
-             getComponent(nextState, cb) {
-                 require.ensure([], require => {
-                     cb(null, require('./routes/breadcrumb/'))
-                 }, 'breadcrumb')
-             },
-         },{
-             path: 'dropdown',
-             name: 'dropdown',
-             getComponent(nextState, cb) {
-                 require.ensure([], require => {
-                     cb(null, require('./routes/dropdown/'))
-                 }, 'dropdown')
-             },
-         },{
              path: 'users',
              name: 'users',
              getComponent(nextState, cb) {

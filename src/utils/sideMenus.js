@@ -15,16 +15,6 @@ const SideMenus = [{
 			key: 'Icon'
 		}]
 	},{
-		name: 'Navigation',
-		key: 'Navigation',
-		children: [{
-			name: 'Breadcrumb 面包屑',
-			key: 'Breadcrumb'
-		}, {
-			name: 'Dropdown 下拉菜单',
-			key: 'Dropdown'
-		}]
-	},{
 		name: 'Custom',
 		key: 'Custom',
 		children: [{
