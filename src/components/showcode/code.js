@@ -21,10 +21,10 @@ class Code extends Component {
 		return (
 			<div className={styles.pre}>
 				{
-					<Tooltip title={this.state.copyed?'复制成功': '复制代码'}>
+					<Tooltip onMouseLeave={this.handleLeave} title={this.state.copyed?'复制成功': '复制代码'}>
 						<CopyToClipboard text={code}>
-						 		<Icon onClick={this.handleCopy} onMouseLeave={this.handleLeave} type={this.state.copyed ? 'check' : 'copy'} />
-						 	</CopyToClipboard>
+						 		<Icon onClick={this.handleCopy}  type={this.state.copyed ? 'check' : 'copy'} />
+						</CopyToClipboard>
 					</Tooltip>  
 				}
 				<SyntaxHighlighter language='javascript' style={xcode}>{code}</SyntaxHighlighter>
