@@ -46,7 +46,9 @@ function App({ children, location, dispatch, app }) {
             <Header {...headerProps}></Header>
             <div className={styles.wrapper}>
                 <Row>
-                    <Col md={6} lg={4}><Sider/></Col>
+                    <Col md={6} lg={4}>
+                        <Sider location={location} />
+                    </Col>
                     <Col md={18} lg={20}>
                         <div className={styles.main}>
                             {children}

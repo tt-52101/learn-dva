@@ -18,15 +18,6 @@
                  }, 'readme')
          },
          childRoutes: [{
-             path: 'users',
-             name: 'users',
-             getComponent(nextState, cb) {
-                 require.ensure([], require => {
-                     registerModel(app, require('./models/users'))
-                     cb(null, require('./routes/users/'))
-                 }, 'users')
-             },
-         },{
              path: 'icon',
              name: 'icon',
              getComponent(nextState, cb) {
@@ -57,6 +48,15 @@
                  require.ensure([], require => {
                      cb(null, require('./routes/dropdown/'))
                  }, 'dropdown')
+             },
+         },{
+             path: 'users',
+             name: 'users',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     registerModel(app, require('./models/users'))
+                     cb(null, require('./routes/users/'))
+                 }, 'users')
              },
          }],
      }, ]

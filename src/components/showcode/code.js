@@ -19,7 +19,7 @@ class Code extends Component {
 	render() {
 		const { code } = this.props;
 		return (
-			<pre className={styles.pre}>
+			<div className={styles.pre}>
 				{
 					<Tooltip title={this.state.copyed?'复制成功': '复制代码'}>
 						<CopyToClipboard text={code}>
@@ -29,7 +29,7 @@ class Code extends Component {
 				}
 				<SyntaxHighlighter language='javascript' style={xcode}>{code}</SyntaxHighlighter>
 				
-			</pre>
+			</div>
 		)
 	}
 }
