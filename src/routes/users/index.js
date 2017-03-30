@@ -1,8 +1,9 @@
 import React from 'react';
-import { connect } from 'dva';
-import styles from './index.css';
-import UserList from './list';
 import { routerRedux } from 'dva/router';
+import { connect } from 'dva';
+
+import UserList from './list';
+import styles from './index.css';
 
 // import MainLayout from '../components/MainLayout/MainLayout';
 

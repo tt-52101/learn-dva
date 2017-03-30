@@ -1,7 +1,8 @@
-import styles from './index.less'
 import {Icon, Tooltip} from 'antd'
+import styles from './index.less'
 function Introduce({title, titleDescription, subtitle, subDescriptions, component, location}){
-	const path = location.pathname.substr(1)
+	console.log(location)
+	const path = location.pathname.substr(0,1) === '/' ? location.pathname.substr(1) : location.pathname
 	const hrefGithub = `https://github.com/ant-design/ant-design/edit/master/components/${path}/index.zh-CN.md`;
 	const hrefAnchor = `#${subtitle}`;
 	return (

@@ -1,10 +1,13 @@
-import styles from './index.less'
-import Introduce from '../../components/introduce/'
 import { Row, Col, Icon, Tooltip } from 'antd'
-import CopyToClipboard from 'react-copy-to-clipboard'
-import IconTypes from '../../utils/icon'
 import { Component } from 'react'
-console.log(location)
+
+import CopyToClipboard from 'react-copy-to-clipboard'
+
+import Introduce from '../../components/introduce/'
+import IconTypes from '../../utils/icon'
+
+import styles from './index.less'
+ 
 const introduceProps = {
 	title: 'Icon 图标',
 	titleDescription: '语义化的矢量图形。',

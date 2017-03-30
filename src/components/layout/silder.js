@@ -40,7 +40,7 @@ class Sider extends React.Component {
                             })
                         }
                     </SubMenu> :
-                    <Menu.Item key={item.key}> <Link to={item.key.toLowerCase()}>{item.name}</Link> </Menu.Item>
+                    <Menu.Item key={item.key}> <Link to={item.key === 'introduce' ? '/' : item.key.toLowerCase()}>{item.name}</Link> </Menu.Item>
                         
                     )
             })

@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Button, Row, Form, Input } from 'antd'
+
 import styles from './index.less'
 const FormItem = Form.Item
 const login = ({

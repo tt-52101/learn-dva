@@ -1,7 +1,8 @@
+import { Row, Col, Button } from 'antd'
+
 import Introduce from '../../components/introduce/'
 import { CodeWrap, Code, CodeDescription, CodeComponent } from '../../components/showcode/'
 
-import { Row, Col, Button } from 'antd'
 const pre_code1 =
  `
 import { Button } from 'antd';
