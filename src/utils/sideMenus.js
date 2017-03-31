@@ -18,11 +18,11 @@ const SideMenus = [{
 		name: 'Custom',
 		key: 'Custom',
 		children: [{
-			name: 'Breadcrumb 面包屑',
-			key: 'Breadcrumb'
+			name: 'AMap 高德地图',
+			key: 'AMap'
 		}, {
-			name: 'Dropdown 下拉菜单',
-			key: 'Dropdown'
+			name: 'Recharts 图表',
+			key: 'Recharts'
 		}]
 	}]
 }]

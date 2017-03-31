@@ -38,8 +38,8 @@ const login = ({
 		            </Button>
 		        </Row>
 		        <p>
-		            <span>账号：guest</span>
-		            <span>密码：guest</span>
+		            <span>账号：任意字符</span>
+		            <span>密码：任意字符</span>
 		        </p>
 		    </form>
 		</div>

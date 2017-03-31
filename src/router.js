@@ -42,6 +42,22 @@
                      cb(null, require('./routes/users/'))
                  }, 'users')
              },
+         },{
+             path: 'amap',
+             name: 'amap',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/amap/'))
+                 }, 'amap')
+             },
+         },{
+             path: 'recharts',
+             name: 'recharts',
+             getComponent(nextState, cb) {
+                 require.ensure([], require => {
+                     cb(null, require('./routes/recharts/'))
+                 }, 'recharts')
+             },
          }],
      }, ]
      return <Router history={history} routes={routes} />
