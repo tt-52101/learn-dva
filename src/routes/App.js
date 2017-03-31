@@ -10,7 +10,6 @@ import Login from './login'
 
 
 function App({ children, location, dispatch, app }) {
-    console.log(app)
     const { is_login, selectedKeys } = app;
     
     const loginProps = {
