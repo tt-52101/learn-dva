@@ -1,5 +1,5 @@
 import fetch from 'dva/fetch';
-// const API = "http://115.29.37.165:18982/api/v1";
+ 
 
 function checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
@@ -9,17 +9,8 @@ function checkStatus(response) {
     error.response = response;
     throw error;
 }
-/**
- * Requests a URL, returning a promise.
- *
- * @param  {string} url       The URL we want to request
- * @param  {object} [options] The options we want to pass to "fetch"
- * @return {object}           An object containing either "data" or "err"
- */
+ 
 export default async function request(url, options) {
-    // options.headers = {
-    //     'Content-Type': 'application/json'
-    // };
     const response = await fetch(url, options);
     console.log(response)
     checkStatus(response);
@@ -29,8 +20,8 @@ export default async function request(url, options) {
         data,
         headers: {},
     };
-    if (response.headers.get('x-total-count')) {
-        ret.headers['x-total-count'] = response.headers.get('x-total-count');
-    }
+    // if (response.headers.get('x-total-count')) {
+    //     ret.headers['x-total-count'] = response.headers.get('x-total-count');
+    // }
     return ret;
 }

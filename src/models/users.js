@@ -23,17 +23,17 @@ export default {
             const {data, headers} = yield call(usersService.fetch, {
                 page
             });
+           
             yield put({
                 type: 'save',
                 payload: {
                     data,
-                    total: parseInt(headers['x-total-count'], 10),
+                    total: 10,
                     page: parseInt(page, 10),
                 },
             });
         },
         * remove({payload: id}, {call, put}) {
-            console.log(payload);
             yield call(usersService.remove, id);
             yield put({
                 type: 'reload'

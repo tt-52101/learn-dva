@@ -5,59 +5,61 @@ import { connect } from 'dva';
 import UserList from './list';
 import styles from './index.css';
 
-// import MainLayout from '../components/MainLayout/MainLayout';
 
-function Users({ location, dispatch, users }) {
-	const { list, loading, page, total } = users;
-	console.log(users)
+
+function Users({ location, dispatch, list, loading, page, total }) {
+	console.log(list)
+ 
 	const userListProps = {
 		dataSource: list,
 		loading,
 		current: page,
 		total,
 		deleteHandler(id) {
-		    dispatch({
-		        type: 'users/remove',
-		        payload: id,
-		    });
+			dispatch({
+				type: 'users/remove',
+				payload: id,
+			});
 		},
 
 		pageChangeHandler(page) {
-		    dispatch(routerRedux.push({
-		        pathname: '/users',
-		        query: { page },
-		    }));
+			dispatch(routerRedux.push({
+				pathname: '/users',
+				query: { page },
+			}));
 		},
 
 		editHandler(id, values) {
-		    dispatch({
-		        type: 'users/patch',
-		        payload: { id, values },
-		    });
+			dispatch({
+				type: 'users/patch',
+				payload: { id, values },
+			});
 		},
 
 		createHandler(values) {
-		    dispatch({
-		        type: 'users/create',
-		        payload: values,
-		    });
+			dispatch({
+				type: 'users/create',
+				payload: values,
+			});
 		}
 	}
-	
-  return (
-  	<h1>Welcome</h1>
-  	
-    // <UserList {...userListProps} />
-  );
-}
- 
 
-function mapStateToProps(state) {
-    const users = {
-    	loading: state.loading.models.users,
-    	...state
-    }
-    return users;
+	return (
+		<UserList {...userListProps} />
+	);
+}
+
+
+function mapStateToProps(state, s) {
+	console.log(s)
+	const { list, page, total } = state.users;
+	return {
+		list,
+		page,
+		total,
+		loading: state.loading.models.users
+	}
+ 
 }
 
 export default connect(mapStateToProps)(Users);
