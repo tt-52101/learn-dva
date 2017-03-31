@@ -1,4 +1,4 @@
-import { Row, Col, Menu, Button, Select } from 'antd';
+import { Row, Col, Menu, Button, Select, Dropdown, Icon } from 'antd';
 const logSrc = 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg'
 import { MenuItems, OptionItems } from '../../utils/config'
  
@@ -7,7 +7,16 @@ import styles from './index.less'
 
 const SubMenu = Menu.SubMenu;
 
-function Headers({handleMenuClick, selectedKeys}){
+
+function Headers({handleMenuClick, selectedKeys, handleLogout}){
+    const menu = (
+      <Menu>
+        <Menu.Item>
+            <Button onClick={handleLogout} type="danger">退出</Button>
+        </Menu.Item>
+     
+      </Menu>
+    );
   
     return (
         <header id={styles.header}>
@@ -16,6 +25,11 @@ function Headers({handleMenuClick, selectedKeys}){
                     <a id={styles.logo} href="/"><img src={logSrc} alt=""/><span>Ant Design</span></a>
                 </Col>
                 <Col span={20}>
+                <Dropdown overlay={menu} placement="bottomCenter" trigger={['click']}>
+                    <a className={styles.logout} href="#">
+                        <Icon type="user" />
+                    </a>
+                </Dropdown>
                 <Button type="ghost" size="small" className={styles.lang}>EN</Button>
                 <Select className={styles.version} size="small" defaultValue="1.x">
                     {
@@ -44,3 +58,4 @@ function Headers({handleMenuClick, selectedKeys}){
 }
 
 export default Headers
+

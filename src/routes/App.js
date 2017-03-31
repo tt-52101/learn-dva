@@ -1,12 +1,14 @@
 import React from 'react'
+import { Row, Col } from 'antd'
 import { connect } from 'dva'
-import styles from '../components/layout/index.less';
+import { browserHistory } from 'dva/router'
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer'
 import Sider from '../components/layout/silder'
 import { routerRedux } from 'dva/router'
-import { Row, Col } from 'antd'
 import Login from './login'
+
+import styles from '../components/layout/index.less';
 
 
 function App({ children, location, dispatch, app }) {
@@ -25,10 +27,10 @@ function App({ children, location, dispatch, app }) {
     }
     const headerProps = {
         handleLogout() {
-            console.log('string')
             dispatch({
                 type: 'app/logout'
             })
+            browserHistory.push('/') //退出后地址栏应该显示首页地址 
         },
         location,
         selectedKeys,
