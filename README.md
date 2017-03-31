@@ -15,5 +15,7 @@
 
 <p align="center">
   <img src="http://120.27.120.107:5083/dist/1.png" />
+</p>
+<p align="center">
   <img src="http://120.27.120.107:5083/dist/2.png" />
 </p>
