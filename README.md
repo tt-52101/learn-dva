@@ -12,7 +12,9 @@
 - 侧边栏上部分是模仿的组件介绍，挑了几个
 - 侧边栏下部分是自己写的其他router内容，配合其他插件的使用
 ---
-
+<p align="center">
+  <img src="http://120.27.120.107:5083/dist/3.png" />
+</p>
 <p align="center">
   <img src="http://120.27.120.107:5083/dist/1.png" />
 </p>
