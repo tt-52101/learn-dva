@@ -45,6 +45,7 @@ class Map extends Component {
 			cluster = new AMap.MarkerClusterer(map, markers);
 		});
 	}
+	
 	componentDidMount() {
 		const script_map = document.createElement("script");
 		script_map.src = "http://webapi.amap.com/maps?v=1.3&key=238d2ca3151115c053024f08481cc681";

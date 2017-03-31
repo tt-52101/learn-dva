@@ -28,7 +28,6 @@ class Code extends Component {
 					</Tooltip>  
 				}
 				<SyntaxHighlighter language='javascript' style={xcode}>{code}</SyntaxHighlighter>
-				
 			</div>
 		)
 	}

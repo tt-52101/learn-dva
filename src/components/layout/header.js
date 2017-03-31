@@ -1,23 +1,23 @@
 import { Row, Col, Menu, Button, Select, Dropdown, Icon } from 'antd';
 const logSrc = 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg'
 import { MenuItems, OptionItems } from '../../utils/config'
- 
+
 import styles from './index.less'
- 
+
 
 const SubMenu = Menu.SubMenu;
 
 
-function Headers({handleMenuClick, selectedKeys, handleLogout}){
+function Headers({ handleMenuClick, selectedKeys, handleLogout }) {
     const menu = (
-      <Menu>
+        <Menu>
         <Menu.Item>
             <Button onClick={handleLogout} type="danger">退出</Button>
         </Menu.Item>
      
       </Menu>
     );
-  
+
     return (
         <header id={styles.header}>
             <Row>
@@ -37,7 +37,6 @@ function Headers({handleMenuClick, selectedKeys, handleLogout}){
                             return <option key={item.key}>{item.name}</option>
                         })
                     }
-                    
                 </Select>
                     <Menu
                       onClick={handleMenuClick}
@@ -54,8 +53,7 @@ function Headers({handleMenuClick, selectedKeys, handleLogout}){
                 </Col>
             </Row>
         </header>
-        )
+    )
 }
 
 export default Headers
-
