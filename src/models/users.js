@@ -19,16 +19,16 @@ export default {
     },
     effects: {
         * fetch({payload: {page = 1}}, {call, put}) {
-            const {data, headers} = yield call(usersService.fetch, {
+            const { data } = yield call(usersService.fetch, {
                 page
             });
-           
+           console.log(data)
             yield put({
                 type: 'save',
                 payload: {
-                    data,
-                    total: 10,
-                    page: parseInt(page, 10),
+                    data: data.data,
+                    total: data.page.total,
+                    page: data.page.current,
                 },
             });
         },

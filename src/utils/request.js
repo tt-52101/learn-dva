@@ -11,6 +11,7 @@ function checkStatus(response) {
 }
  
 export default async function request(url, options) {
+    console.log(options)
     const response = await fetch(url, options);
     console.log(response)
     checkStatus(response);
@@ -20,8 +21,6 @@ export default async function request(url, options) {
         data,
         headers: {},
     };
-    // if (response.headers.get('x-total-count')) {
-    //     ret.headers['x-total-count'] = response.headers.get('x-total-count');
-    // }
+ 
     return ret;
 }

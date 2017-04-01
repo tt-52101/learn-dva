@@ -40,7 +40,7 @@ class UserEditModal extends Component {
     render() {
         const {children, modalTitle} = this.props;
         const {getFieldDecorator} = this.props.form;
-        const {name, email, website} = this.props.record;
+        const {name, age, phone, email, address} = this.props.record;
         const formItemLayout = {
             labelCol: {
                 span: 6
@@ -57,16 +57,24 @@ class UserEditModal extends Component {
                 </span>
                 <Modal title={modalTitle} visible={this.state.visible} onOk={this.okHandler} onCancel={this.hideModelHandler}>
                     <Form horizontal onSubmit={this.okHandler}>
-                        <FormItem {...formItemLayout} label="Name">
+                        <FormItem {...formItemLayout} label="姓名">
                             { getFieldDecorator('name', { initialValue: name, })(
                             <Input />) }
                         </FormItem>
-                        <FormItem {...formItemLayout} label="Email">
+                        <FormItem {...formItemLayout} label="年龄">
+                            { getFieldDecorator('age', { initialValue: age, })(
+                            <Input />) }
+                        </FormItem>
+                        <FormItem {...formItemLayout} label="电话">
+                            { getFieldDecorator('phone', { initialValue: phone, })(
+                            <Input />) }
+                        </FormItem>
+                        <FormItem {...formItemLayout} label="邮箱">
                             { getFieldDecorator('email', { initialValue: email, })(
                             <Input />) }
                         </FormItem>
-                        <FormItem {...formItemLayout} label="Website">
-                            { getFieldDecorator('website', { initialValue: website, })(
+                        <FormItem {...formItemLayout} label="地址">
+                            { getFieldDecorator('address', { initialValue: address, })(
                             <Input />) }
                         </FormItem>
                     </Form>

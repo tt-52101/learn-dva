@@ -19,6 +19,7 @@
     "recharts": "^0.21.2"
   },
   "devDependencies": {
+    "axios": "^0.16.0",
     "babel-eslint": "^7.2.1",
     "babel-plugin-dva-hmr": "^0.3.2",
     "babel-plugin-import": "^1.1.1",

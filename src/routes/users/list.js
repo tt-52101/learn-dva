@@ -9,19 +9,27 @@ import UserModal from './modal.js';
 function UserList({dataSource, current, loading, deleteHandler, pageChangeHandler, editHandler, createHandler, total}) {
 
     const columns = [{
-        title: 'Name',
+        title: '姓名',
         dataIndex: 'name',
         key: 'name',
         render: text => <a href="">{text}</a>,
-    }, {
-        title: 'Email',
+    },  {
+        title: '年龄',
+        dataIndex: 'age',
+        key: 'age',
+    },{
+        title: '电话',
+        dataIndex: 'phone',
+        key: 'phone',
+    },{
+        title: '邮箱',
         dataIndex: 'email',
         key: 'email',
     }, {
-        title: 'Website',
-        dataIndex: 'website',
-        key: 'website',
-    }, {
+        title: '地址',
+        dataIndex: 'address',
+        key: 'address',
+    },{
         title: 'Operation',
         key: 'operation',
         render: (text, record) => (<span className={styles.operation}>
