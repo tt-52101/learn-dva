@@ -23,6 +23,9 @@ const SideMenus = [{
 		}, {
 			name: 'Recharts 图表',
 			key: 'Recharts'
+		}, {
+			name: 'Users 用户',
+			key: 'Users'
 		}]
 	}]
 }]
